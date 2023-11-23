@@ -1,11 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Portfolio de Mathieu Raveleau, étudiant en BTS SIO 2ème année option SLAM">
+    <meta name="keywords" content="Mathieu Raveleau, Portfolio, BTS SIO, SLAM, Développeur Web">
+    <meta name="author" content="Mathieu Raveleau">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Portfolio de Mathieu Raveleau">
+    <meta property="og:type" content="website">
+
+    <title>Mathieu Raveleau - Portfolio</title>
+
+    <!-- LINKS & SCRIPTS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- link to jquery, gsap, ScrollTrigger, bootstrap css & js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+        integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="js/main.js"></script>
 </head>
+
 <body>
-    YES
+    <nav class="navbar navbar-expand-md fixed-top">
+        <button class="btn" type="button"><i class="fa-solid fa-bars" style="color:white"></i></button>
+        <div id="menu">
+            <a href="#realisations" class="header_link">Mes Réalisations</a>
+            <a href="#competences" class="header_link">Mes Compétences</a>
+            <a href="#contact" class="header_link">Me Contacter</a>
+        </div>
+    </nav>
+    <div class="hero container-fluid p-0 position-relative d-flex justify-content-center align-items-center">
+        <div
+            class="container position-relative h-100 d-flex justify-content-center align-items-center text-white flex-column">
+            <h1 class="title position-absolute text-lg d-flex flex-row">
+                <span class="ml-2">M</span>
+                <span class="ml-2">A</span>
+                <span class="ml-2">T</span>
+                <span class="ml-2">H</span>
+                <span class="ml-2">I</span>
+                <span class="ml-2">E</span>
+                <span class="ml-2">U</span>
+                <span class="ml-2"> </span>
+                <span class="ml-2">R</span>
+                <span class="ml-2">A</span>
+                <span class="ml-2">V</span>
+                <span class="ml-2">E</span>
+                <span class="ml-2">L</span>
+                <span class="ml-2">E</span>
+                <span class="ml-2">A</span>
+                <span class="ml-2">U</span>
+            </h1>
+            <p class="text-dark position-absolute" style="transform: translateY(2vh);">Développeur Web & applicatifs</p>
+            <a class="more position-absolute" id="arrow_next" href="#me">
+                <i class="fa-solid fa-angles-down"></i>
+            </a>
+        </div>
+    </div>
 </body>
+
 </html>
