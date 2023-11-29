@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #010443;
+  /* background: #010443; */
 }
 
 /* SCROLLBAR */
@@ -26,70 +26,7 @@ body {
 
 /* HEADER */
 
-.navbar {
-  padding: 1rem 2rem !important;
-  background-image: linear-gradient(to bottom, #010443 20%, transparent);
-}
-
 .fa-bars {
   font-size: 3em;
   cursor: pointer;
-}
-
-
-
-/* HERO BANNER */
-
-.hero {
-  background-image: url(../10857.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
-
-.title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 8ch;
-  color: #fff;
-  text-align: center;
-  transform: translateY(-5vh);
-  /* text-shadow: 0 0 10px #ccc; */
-}
-
-.title span {
-  transition: 0.5s ease-in-out;
-  /* opacity: 0; */
-}
-
-/* ON HOVER, DRAW A LINE UNDER IT */
-.title span::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 3px;
-  background: #fff;
-  margin: 5px auto;
-}
-
-.title span:hover::after {
-  width: 90%;
-}
-
-.more {
-  color: #fff;
-  bottom: 4vh;
-  padding: 1rem 2rem;
-}
-
-.more svg {
-  transition: .3s ease-in-out;
-  width: 100%;
-  text-align: center;
-}
-
-.more svg:hover {
-  transform: translateY(-5px);
-  text-decoration: none;
-  color: #eee;
 }
