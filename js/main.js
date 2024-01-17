@@ -30,13 +30,13 @@ $(document).ready(function () {
     });
 
     // animate on scroll from left to normal for #home #home-info .row
-    gsap.from("#home #home-info .row", {
+    gsap.from("#home #home-info .info-container .info-left div", {
         duration: 1,
-        opacity: 0.4,
+        opacity: 0,
         x: -50,
         ease: "power2.out",
         scrollTrigger: {
-            trigger: "#home #home-info .row",
+            trigger: "#home #home-info .info-container .info-left",
             start: "top 80%",
             end: "bottom 80%",
             toggleActions: "restart none none reverse"

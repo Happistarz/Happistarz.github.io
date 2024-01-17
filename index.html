@@ -2,93 +2,122 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Mathieu Raveleau, étudiant en BTS SIO 2ème année option SLAM">
-  <meta name="keywords" content="Mathieu Raveleau, Portfolio, BTS SIO, SLAM, Développeur Web">
-  <meta name="author" content="Mathieu Raveleau">
-  <meta name="robots" content="index, follow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Mathieu Raveleau, étudiant en BTS SIO 2ème année option SLAM">
+    <meta name="keywords" content="Mathieu Raveleau, Portfolio, BTS SIO, SLAM, Développeur Web">
+    <meta name="author" content="Mathieu Raveleau">
+    <meta name="robots" content="index, follow">
 
-  <meta property="og:title" content="Portfolio de Mathieu Raveleau">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mraveleau.poupli.net">
-  <meta property="og:image" content="https://mraveleau.poupli.net/image.png">
-  <meta property="og:description" content="Portfolio de Mathieu Raveleau, étudiant en BTS SIO 2ème année option SLAM">
+    <meta property="og:title" content="Portfolio de Mathieu Raveleau">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mraveleau.poupli.net">
+    <meta property="og:image" content="https://mraveleau.poupli.net/image.png">
+    <meta property="og:description" content="Portfolio de Mathieu Raveleau, étudiant en BTS SIO 2ème année option SLAM">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="mraveleau.poupli.net">
-  <meta property="twitter:url" content="https://mraveleau.poupli.net">
-  <meta name="twitter:title" content="Portfolio de Mathieu Raveleau">
-  <meta name="twitter:description" content="Portfolio de Mathieu Raveleau, étudiant en BTS SIO 2ème année option SLAM">
-  <meta name="twitter:image" content="https://mraveleau.poupli.net/image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="mraveleau.poupli.net">
+    <meta property="twitter:url" content="https://mraveleau.poupli.net">
+    <meta name="twitter:title" content="Portfolio de Mathieu Raveleau">
+    <meta name="twitter:description"
+        content="Portfolio de Mathieu Raveleau, étudiant en BTS SIO 2ème année option SLAM">
+    <meta name="twitter:image" content="https://mraveleau.poupli.net/image.png">
 
-  <title>Mathieu Raveleau - Portfolio</title>
+    <title>Mathieu Raveleau - Portfolio</title>
 
-  <!-- LINKS & SCRIPTS -->
-  <!-- link to jquery, gsap, ScrollTrigger, bootstrap css & js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <!-- LINKS & SCRIPTS -->
+    <!-- link to jquery, gsap, ScrollTrigger, bootstrap css & js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
-    integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+        integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <!-- link to my css & js -->
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
+    <!-- link to my css & js -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
-  <!-- bottom navbar fixed -->
-  <div class="bottom-navbar">
-    <ul>
-      <li><a href="#home" class="current">ACCUEIL</a></li>
-      <li><a href="#skills">COMPETENCES</a></li>
-      <li><a href="#projects">PROJETS</a></li>
-      <li><a href="#contact">CONTACT</a></li>
-    </ul>
-  </div>
-
-  <!-- home section -->
-  <section id="home">
-    <div class="home-container">
-      <div class="home-content">
-        <h1>Mathieu Raveleau</h1>
-        <h2><i>Étudiant en <u>BTS SIO</u> 2ème année option <u>SLAM</u></i></h2>
-        <a href="#home-info"><i class="fas fa-chevron-down"></i></a>
-      </div>
+    <!-- bottom navbar fixed -->
+    <div class="bottom-navbar">
+        <ul>
+            <li><a href="#home" class="current">ACCUEIL</a></li>
+            <li><a href="#skills">COMPETENCES</a></li>
+            <li><a href="#projects">PROJETS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
     </div>
-    <div id="home-info">
-        <div class="home-info-content">
-          <h3>Mathieu Raveleau</h3>
-          <div class="row">
-            <div class="col left">
-              <p><i class="fas fa-map-marker-alt"></i> Vienne 86</p>
-              <p><i class="fas fa-cake-candles"></i> 19 ans</p>
-              <p><i class="fas fa-car-side"></i>Permis B</p>
+
+    <!-- home section -->
+    <section id="home">
+        <div class="home-container">
+            <div class="home-content">
+                <h1>Mathieu Raveleau</h1>
+                <h2><i>Étudiant en <u>BTS SIO</u> 2ème année option <u>SLAM</u></i></h2>
+                <a href="#home-info"><i class="fas fa-chevron-down"></i></a>
             </div>
-            <div class="col right">
-              <p>BTS SIO 2ème année option SLAM<br>
-                <span><i class="fas fa-graduation-cap"></i> Lycée Guy Chauvet - Loudun</span>
-              </p>
+        </div>
+        <div id="home-info">
+            <h3>Mathieu Raveleau</h3>
+            <div class="info-container">
+                <div class="info-left">
+                    <div>
+                        <h3 class="info-title">Informations</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Vienne (86)</p>
+                        <p><i class="fas fa-cake-candles"></i> 19 ans</p>
+                        <p><i class="fas fa-car-side"></i> Permis B & véhiculé</p>
+                    </div>
+                    <div>
+                        <h3 class="info-title">Formations</h3>
+                        <p class="formation">
+                            <span>
+                                BTS SIO 2ème année option
+                                <abbr title="Solutions Logicielles et Applications Métiers">
+                                    S.L.A.M
+                                </abbr>
+                            </span>
+                            <span>
+                                <i class="fas fa-graduation-cap"></i>
+                                Lycée Guy Chauvet - Loudun
+                            </span>
+                        </p>
 
 
-              <p>BAC STI2D option SIN Math Physique<br>
-                <span><i class="fas fa-graduation-cap"></i> Lycée Nelson Mandela - Poitiers</span>
-              </p>
-            </div> 
-          </div>
-    </div>
-    <div id="skills">
-      <div class="skills-container">
-        <h1>Compétences</h1>
-        <div class="skills-content">
-          <!-- <div class="row">
+                        <p class="formation">
+                            <span>
+                                BAC.
+                                <abbr title="Sciences et Technologies de l'Industrie et du Développement Durable">
+                                    S.T.I.2.D
+                                </abbr>
+                                options
+                                <abbr title="Système d'Information et Numérique">
+                                    S.I.N
+                                </abbr>
+                                Math Physique
+                            </span>
+                            <span>
+                                <i class="fas fa-graduation-cap"></i>
+                                Lycée Nelson Mandela - Poitiers
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="info-right">
+                </div>
+            </div>
+        </div>
+        <div id="skills">
+            <div class="skills-container">
+                <h1>Compétences</h1>
+                <div class="skills-content">
+                    <!-- <div class="row">
             <div class="col left">
               <p><i class="fa-brands fa-html5"></i> HTML</p>
               <p><i class="fa-brands fa-css3-alt"></i> CSS</p>
@@ -106,10 +135,10 @@
               <p><i class="fa-brands fa-docker"></i> Docker</p>
             </div>
           </div> -->
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <!-- <div style="height: 100vh;"></div> -->
+        <div style="height: 100vh;"></div>
 </body>
 
 </html>
