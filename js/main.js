@@ -24,7 +24,7 @@ $(document).ready(function () {
         const target = $(this.getAttribute('href'));
         if (target.length) {
             $('html, body').stop().animate({
-                scrollTop: target.offset().top - 50
+                scrollTop: target.offset().top - 70
             }, 1000);
         }
     });
@@ -38,6 +38,18 @@ $(document).ready(function () {
         scrollTrigger: {
             trigger: "#home #home-info .info-container .info-left",
             start: "top 80%",
+            end: "bottom 80%",
+            toggleActions: "restart none none reverse"
+        }
+    });
+
+    gsap.from('#tableau', {
+        duration: 1,
+        opacity: 0,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: "#tableau",
+            start: "top 60%",
             end: "bottom 80%",
             toggleActions: "restart none none reverse"
         }
