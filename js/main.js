@@ -54,9 +54,27 @@ $(document).ready(function () {
             toggleActions: "restart none none reverse"
         }
     });
+
+    gsap.from('.skills-content .content p', {
+        duration: 1,
+        opacity: 0,
+        stagger: 0.2,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".skills-content",
+            start: "top 80%",
+            end: "bottom 80%",
+            toggleActions: "restart none none reverse"
+        }
+    })
 })
 
 $('.bottom-navbar ul li a').click(function () {
     $('.bottom-navbar ul li a').removeClass("current");
     $(this).addClass("current");
+});
+
+$('#projects .project-content .head button').click(function () {
+    $('#projects .project-content .head button').removeClass("selected");
+    $(this).addClass("selected");
 });
