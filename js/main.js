@@ -30,7 +30,6 @@ $(document).ready(function () {
         }
     });
 
-    // animate on scroll from left to normal for #home #home-info .row
     gsap.from("#home #home-info .info-container .info-left div", {
         duration: 1,
         opacity: 0,
@@ -69,16 +68,16 @@ $(document).ready(function () {
         }
     });
 
-    function changeProject() {
-        $('#projects .project-content .project').each(function () {
-            if (selectedProject === 'all' || $(this).data('type') === selectedProject) {
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
-        });
-    }
 });
+function changeProject() {
+    $('#projects .project-content .project').each(function () {
+        if (selectedProject === 'all' || $(this).data('type') === selectedProject) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+    });
+}
 
 $('.bottom-navbar ul li a').click(function () {
     $('.bottom-navbar ul li a').removeClass("current");
@@ -90,4 +89,25 @@ $('#projects .project-content .head button').click(function () {
     $(this).addClass("selected");
     selectedProject = $(this).data('type');
     changeProject();
+});
+
+$('#projects .project-content .project .project-info button').click(function () {
+    // set data after...
+    $('#projects .projectmodal').show();
+    // stop scroll
+    $('body').css('overflow', 'hidden');
+});
+
+$('#projects .projectmodal .modal-content > button').click(function () {
+    $('#projects .projectmodal').hide();
+    // resume scroll
+    $('body').css('overflow', 'auto');
+});
+
+$('#projects .projectmodal').click(function (e) {
+    if (e.target === this) {
+        $('#projects .projectmodal').hide();
+        // resume scroll
+        $('body').css('overflow', 'auto');
+    }
 });

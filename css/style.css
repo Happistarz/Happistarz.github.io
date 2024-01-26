@@ -486,7 +486,7 @@ iframe {
   background: var(--secondary-color);
 }
 
-#projects > h1 {
+#projects>h1 {
   font-size: 5em;
   font-family: var(--header-font);
   text-align: center;
@@ -672,4 +672,157 @@ iframe {
   background-color: var(--tertiary-color);
   border-radius: 1.625rem;
   font-style: italic;
+}
+
+.projectmodal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.projectmodal .modal-content {
+  background-color: var(--primary-color);
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 1.625rem;
+}
+
+.projectmodal .modal-content>button {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border-radius: 50%;
+}
+
+.projectmodal .modal-content>button:hover,
+.projectmodal .modal-content>button:focus {
+  text-decoration: none;
+  cursor: pointer;
+  background: #ffffff6b;
+}
+
+.projectmodal .modal-content .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 0;
+  gap: 6rem;
+  margin: 2rem 0;
+}
+
+.projectmodal .modal-content .row .col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2rem;
+  border-radius: 1.625rem;
+  padding: 1rem;
+}
+
+.projectmodal .modal-content .row .col h3 {
+  font-size: 2.5em;
+  font-family: var(--header-font);
+  font-weight: 500;
+  margin: 0 0 3rem 0;
+  width: 100%;
+  text-align: center;
+  color: var(--tertiary-color);
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.projectmodal .modal-content .row .col article {
+  font-size: 1.2em;
+  font-family: var(--body-font);
+  font-weight: 200;
+  width: 100%;
+  margin: 0 0 2rem 0;
+  color: var(--tertiary-color);
+}
+
+.projectmodal .modal-content .row .col .categories {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.projectmodal .modal-content .row .col .categories span {
+  font-size: 0.9em;
+  font-family: var(--body-font);
+  font-weight: 200;
+  margin-top: -10px;
+  text-align: center;
+  color: var(--tertiary-color);
+  padding: 0.5rem 0;
+  background-color: var(--primary-color);
+  border-radius: 1.625rem;
+  font-style: italic;
+}
+
+.projectmodal .modal-content .row .col .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.projectmodal .modal-content .row .col .links a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--tertiary-color);
+  background: var(--primary-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1.625rem;
+  font-size: 1.3em;
+  font-family: var(--header-font);
+  transition: 0.3s;
+}
+
+.projectmodal .modal-content .row .col .links a:hover {
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+}
+
+.projectmodal .modal-content .row .col img {
+  width: 80%;
+  border-radius: 1.625rem;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.projectmodal .modal-content .row .col .info p {
+  font-size: 1.2em;
+  font-family: var(--body-font);
+  font-weight: 200;
+  width: 100%;
+  margin: 0 0 2rem 0;
+  color: var(--tertiary-color);
 }
