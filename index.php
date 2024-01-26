@@ -1,3 +1,12 @@
+<?php 
+    
+    $db = new PDO('mysql:host=localhost;dbname=portfolio', 'chef', 'mdpchef');
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $query = $db->query('SELECT * FROM projects');
+    $projects = $query->fetchAll(PDO::FETCH_ASSOC);
+    
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -19,8 +28,7 @@
     <meta property="twitter:domain" content="mraveleau.poupli.net">
     <meta property="twitter:url" content="https://mraveleau.poupli.net">
     <meta name="twitter:title" content="Portfolio de Mathieu Raveleau">
-    <meta name="twitter:description"
-        content="Portfolio de Mathieu Raveleau, étudiant en BTS SIO 2ème année option SLAM">
+    <meta name="twitter:description" content="Portfolio de Mathieu Raveleau, étudiant en BTS SIO 2ème année option SLAM">
     <meta name="twitter:image" content="https://mraveleau.poupli.net/image.png">
 
     <title>Mathieu Raveleau - Portfolio</title>
@@ -31,13 +39,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
-        integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- link to my css & js -->
     <link rel="stylesheet" href="css/style.css">
@@ -116,8 +120,7 @@
             <h3> Tableau de synthèse</h3>
         </div>
         <div class="center" id="tableau">
-            <iframe
-                src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQumgoCFmYSh25NZyGc7BdJzZiElccf2RdL4A6an2m82Fek2_rbNjvl77JCqZgBEtqMwH9t3RuFBzFb/pubhtml?widget=true&amp;headers=false"></iframe>
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQumgoCFmYSh25NZyGc7BdJzZiElccf2RdL4A6an2m82Fek2_rbNjvl77JCqZgBEtqMwH9t3RuFBzFb/pubhtml?widget=true&amp;headers=false"></iframe>
         </div>
         <div id="skills">
             <div class="skills-container">
@@ -183,25 +186,24 @@
                     <p><span>ODP:</span> Organiser son Développement Professionnel</p>
                 </div>
                 <div class="projects">
-                    <div class="project" data-type="formation" data-info="Lorem lorem info" data-img="image.png"
-                        data-categories="PI,IDAE,DPLO,TMP,DUSI,ODP" data-title="Portfolio"
-                        data-article="lorem lorem lorem article"
-                        data-links="Voir le site;https://youtube.com;fa-globe,Voir le code;/robots.txt;fa-code">
-                        <img src="image.png" alt="website">
-                        <div class="project-info">
-                            <h3>Portfolio</h3>
-                            <p>Portfolio réalisé en HTML, CSS, JavaScript et PHP</p>
-                            <div class="categories">
-                                <span>PI</span>
-                                <span>IDAE</span>
-                                <span>DPLO</span>
-                                <span>TMP</span>
-                                <span>DUSI</span>
-                                <span>ODP</span>
+                    <?php foreach ($projects as $project) :
+                        extract($project); 
+                        ?>
+                        <div class="project" data-type="<?php echo $TYPE ?>" data-info="<?php echo $INFO ?>" data-img="<?php echo $IMG ?>" data-categories="<?php echo $CATEGORIES ?>" data-title="<?php echo $TITLE ?>" data-article="<?php echo $ARTICLE ?>" data-links="<?php echo $LINKS ?>">
+                            <img src="<?php echo $IMG ?>" alt="<?php echo $TYPE ?>">
+                            <div class="project-info">
+                                <h3><?php echo $TITLE ?></h3>
+                                <p><?php echo $INFO ?></p>
+                                <div class="categories">
+                                <?php $cat = explode(",", $CATEGORIES) ?>
+                                    <?php foreach ($cat as $category) : ?>
+                                        <span><?php echo $category ?></span>
+                                    <?php endforeach; ?>
+                                </div>
+                                <button>Voir le projet</button>
                             </div>
-                            <button>Voir le projet</button>
                         </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
                 <div class="projectmodal">
                     <div class="modal-content">
@@ -236,33 +238,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="contact">
-            <!-- github, linkedin, mailto, tel-->
-            <h1>Contact</h1>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <p> 
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto: example@mail.com"> Email</a>
-                        </p>
-                        <p>
-                            <i class="fas fa-phone"></i>
-                            <a href="tel: 0123456789"> Téléphone</a>
-                        </p>
-                        <p>
-                            <i class="fa-brands fa-github"></i>
-                            <a href="https://github.com/Happistarz"> GitHub</a>
-                        </p>
-                        <p>
-                            <i class="fa-brands fa-linkedin"></i>
-                            <a href="https://www.linkedin.com/in/mathieu-raveleau-2b1b3b1b9/"> LinkedIn</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
 </body>
 
 </html>

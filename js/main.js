@@ -79,6 +79,32 @@ function changeProject() {
     });
 }
 
+function setModal(data) {
+    console.log(data);
+    const modal = $('#projects .projectmodal .modal-content .row');
+
+    modal.find('.col h3').text(data.title);
+    modal.find('.col .info p').text(data.info);
+    modal.find('.col article').text(data.article);
+    modal.find('.col img').attr('src', data.img);
+
+    modal.find('.col .categories').empty();
+    let categories = data.categories.split(',');
+    let categoriesHtml = '';
+    categories.forEach(category => {
+        categoriesHtml += `<span>${category}</span>`;
+    });
+    modal.find('.col .categories').html(categoriesHtml);
+
+    modal.find('.col .links').empty();
+    let links = data.links.split(',');
+    links.forEach(link => {
+        link = link.split(';');
+        let linkHtml = `<a href="${link[1]}" target="_blank"><i class="fas ${link[2]}"></i> ${link[0]}</a>`;
+        modal.find('.col .links').append(linkHtml);
+    });
+}
+
 $('.bottom-navbar ul li a').click(function () {
     $('.bottom-navbar ul li a').removeClass("current");
     $(this).addClass("current");
@@ -92,7 +118,18 @@ $('#projects .project-content .head button').click(function () {
 });
 
 $('#projects .project-content .project .project-info button').click(function () {
-    // set data after...
+    const project = $(this).closest('.project');
+    let data = {
+        title: project.data('title'),
+        article: project.data('article'),
+        categories: project.data('categories'),
+        img: project.data('img'),
+        links: project.data('links'),
+        info: project.data('info')
+    };
+
+    setModal(data);
+
     $('#projects .projectmodal').show();
     // stop scroll
     $('body').css('overflow', 'hidden');
