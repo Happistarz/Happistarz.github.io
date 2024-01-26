@@ -486,8 +486,8 @@ iframe {
   background: var(--secondary-color);
 }
 
-#projects h1 {
-  font-size: 3em;
+#projects > h1 {
+  font-size: 5em;
   font-family: var(--header-font);
   text-align: center;
   text-transform: uppercase;
@@ -514,7 +514,7 @@ iframe {
   padding: 20px;
   margin: 2rem 0;
   background-color: var(--tertiary-color);
-  border-radius: 2rem;
+  border-radius: 2.4rem;
   gap: 2rem;
 }
 
@@ -591,19 +591,85 @@ iframe {
   flex-direction: column;
   width: 80%;
   padding: 0;
-  gap: 2rem;
+  gap: 0.5rem;
   background-color: var(--tertiary-color);
-  border-radius: 2rem;
+  border-radius: 2.4rem;
   padding: 1.5rem;
   transition: 0.2s ease-in-out;
   color: var(--primary-color);
 }
 
-#projects .project-content .projects .project:hover {
-  transform: translateY(-10px);
+#projects .project-content .projects .project .project-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
 }
 
 #projects .project-content .projects .project img {
   width: 100%;
   border-radius: 1.625rem;
+}
+
+#projects .project-content .projects .project h3 {
+  font-size: 1.8em;
+  font-family: var(--header-font);
+  font-weight: 500;
+  margin: 0;
+  width: 100%;
+  color: var(--primary-color);
+  padding: 0.5rem 0 0 0;
+  text-transform: uppercase;
+}
+
+#projects .project-content .projects .project p {
+  font-size: 0.9em;
+  font-family: var(--body-font);
+  font-weight: 200;
+  width: 100%;
+  margin: 0 0 2rem 0;
+  color: var(--primary-color);
+}
+
+#projects .project-content .projects .project button {
+  text-align: center;
+  text-decoration: none;
+  color: var(--tertiary-color);
+  background: var(--primary-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1.625rem;
+  font-size: 1.3em;
+  font-family: var(--header-font);
+  transition: 0.3s;
+}
+
+#projects .project-content .projects .project button:hover {
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+}
+
+#projects .project-content .projects .project .categories {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+#projects .project-content .projects .project .categories span {
+  font-size: 0.9em;
+  font-family: var(--body-font);
+  font-weight: 200;
+  margin-top: -10px;
+  text-align: center;
+  color: var(--primary-color);
+  padding: 0.5rem 0;
+  background-color: var(--tertiary-color);
+  border-radius: 1.625rem;
+  font-style: italic;
 }
