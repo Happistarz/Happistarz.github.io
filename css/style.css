@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;1,300&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 /* var colors */
@@ -690,8 +689,11 @@ iframe {
 
 .projectmodal .modal-content {
   background-color: var(--primary-color);
-  position: relative;
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* margin: auto; */
   padding: 20px;
   width: 80%;
   border-radius: 4rem;
@@ -766,6 +768,8 @@ iframe {
   width: 100%;
   margin: 0 0 2rem 0;
   color: var(--tertiary-color);
+  overflow: auto;
+  height: 100%;
 }
 
 .projectmodal .modal-content .row .col .categories {

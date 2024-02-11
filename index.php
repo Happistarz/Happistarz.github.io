@@ -1,6 +1,8 @@
 <?php 
+
+    ini_set('display_errors', 1);
     
-    $db = new PDO('mysql:host=localhost;dbname=portfolio', 'chef', 'mdpchef');
+    $db = new PDO('mysql:host=localhost;dbname=mraveleaudb', 'mraveleau', 'EFBq4^stzqdo5wDm');
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $query = $db->query('SELECT * FROM projects');
@@ -156,7 +158,7 @@
                                 <h3>Software</h3>
                                 <div class="content">
 
-                                    <p><i class="fa-brands fa-linux"></i> Debian</p>
+                                    <p><i class="fa-brands fa-debian"></i>Debian</p>
                                     <p><i class="fa-brands fa-windows"></i> Windows</p>
                                 </div>
                             </div>

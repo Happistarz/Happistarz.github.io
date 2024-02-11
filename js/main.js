@@ -80,12 +80,11 @@ function changeProject() {
 }
 
 function setModal(data) {
-    console.log(data);
     const modal = $('#projects .projectmodal .modal-content .row');
 
     modal.find('.col h3').text(data.title);
     modal.find('.col .info p').text(data.info);
-    modal.find('.col article').text(data.article);
+    modal.find('.col article').css('white-space','pre-line').html(data.article);
     modal.find('.col img').attr('src', data.img);
 
     modal.find('.col .categories').empty();
