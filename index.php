@@ -64,7 +64,8 @@
     <!-- home section -->
     <section id="home">
         <div class="home-container">
-            <div class="home-content">
+            <img src="background.png" style="display:none" width="100%" height="100%">
+            <div class="home-content" style="color:black">
                 <h1>Mathieu Raveleau</h1>
                 <h2><i>Étudiant en <u>BTS SIO</u> 2ème année option <u>SLAM</u></i></h2>
                 <a href="#home-info"><i class="fas fa-chevron-down"></i></a>
@@ -116,6 +117,7 @@
                     </div>
                 </div>
                 <div class="info-right">
+                    <img src="img/photo.jpg" width="50%" style="border-radius:1.625rem"/>
                 </div>
             </div>
             <hr>
@@ -192,7 +194,9 @@
                         extract($project); 
                         ?>
                         <div class="project" data-type="<?php echo $TYPE ?>" data-info="<?php echo $INFO ?>" data-img="<?php echo $IMG ?>" data-categories="<?php echo $CATEGORIES ?>" data-title="<?php echo $TITLE ?>" data-article="<?php echo $ARTICLE ?>" data-links="<?php echo $LINKS ?>">
-                            <img src="<?php echo $IMG ?>" alt="<?php echo $TYPE ?>">
+                            <div style="display:flex;align-items:center">
+                                <img src="<?php echo $IMG ?>" alt="<?php echo $TYPE." ". $TITLE ?>">
+                            </div>
                             <div class="project-info">
                                 <h3><?php echo $TITLE ?></h3>
                                 <p><?php echo $INFO ?></p>

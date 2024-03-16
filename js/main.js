@@ -8,6 +8,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 $(document).ready(function () {
 
+    $('#home .home-container img').load(function() {
+        $(this).fadeIn();
+        $("#home .home-container .home-content").css('color','white');
+    })
+
     gsap.from("#home .home-content", { duration: 1, opacity: 0, y: -75, ease: "power2.out" });
     const arrow = $("#home .home-content a");
 
@@ -129,21 +134,21 @@ $('#projects .project-content .project .project-info button').click(function () 
 
     setModal(data);
 
-    $('#projects .projectmodal').show();
+    $('#projects .projectmodal').fadeIn();
     // stop scroll
-    $('body').css('overflow', 'hidden');
+    //$('body').css('overflow', 'hidden');
 });
 
 $('#projects .projectmodal .modal-content > button').click(function () {
-    $('#projects .projectmodal').hide();
+    $('#projects .projectmodal').fadeOut();
     // resume scroll
-    $('body').css('overflow', 'auto');
+    //$('body').css('overflow', 'auto');
 });
 
 $('#projects .projectmodal').click(function (e) {
     if (e.target === this) {
-        $('#projects .projectmodal').hide();
+        $('#projects .projectmodal').fadeOut();
         // resume scroll
-        $('body').css('overflow', 'auto');
+        //$('body').css('overflow', 'auto');
     }
 });
